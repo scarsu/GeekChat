@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeekChat</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Node.js即时通讯"/>
+    <meta name="description" content="GeekChat" />
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/chatroom.css" />
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/js/base.js"></script>
+    <script type="text/javascript" src="/js/chatroom.js"></script>
+
+</head>
+<body>
+<div class="root">
+    <!--页头-->
+    <%- include header.ejs %>
+
+    <!--群聊-->
+    <div class="msgBox wrapper card">
+        <div class="left">
+            <div class="roomInfo">
+                <img src="/img/room/default.jpg">
+                <span>
+                    <span class="roomName"></span>
+                    [自<span class="roomStartTime"></span>建立]
+                </span>
+                <span class="addFavBtn addFavBtnActive" onclick="chgFavFn()"><span class="glyphicon glyphicon-plus"></span> 收藏</span>
+            </div>
+            <div class="roomIntro"></div>
+            <ul class="msgList"></ul>
+            <div class="toolBar">
+                <div class="lookBox hide"></div>
+                <input type="color" value="color" class="colorBox">
+                <span class="chgTextColor">字体颜色</span>
+                <span class="addLook">添加表情:)</span>
+                <span class="addImg">
+                    <span class="glyphicon glyphicon-picture" alt="添加图片"></span>
+                </span>
+                <input type="file" class="addImgInput">
+            </div>
+            <div class="editor">
+                <textarea id="chatCont" placeholder="按enter键发送消息"></textarea>
+                <button class="send btn btn-primary">发送</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="myInfo">
+                <img src="/img/user/default.png" class="myInfoImg" alt="">
+                <p>[昵称]:<span class="myInfoUsername"></span></p>
+                <p>[地点]:<span class="myInfoAddr"></span></p>
+            </div>
+            <div class="people">
+                <p class="header">
+                    >在线网友 [
+                    <span class="onlineNum"></span>
+                    人]
+                </p>
+                <ul class="onlineList"></ul>
+            </div>
+        </div>
+        <dic class="clearFloat"></dic>
+    </div>
+
+    <!--页脚-->
+    <%- include footer.ejs %>
+</div>
+</body>
+</html>

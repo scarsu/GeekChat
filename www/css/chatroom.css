@@ -1,0 +1,237 @@
+.card{
+    border-radius: 3px;
+    box-shadow: none;
+}
+.msgBox{
+    padding:0;
+    background: #EAEEF9;
+    border: 1px #ddd solid;
+}
+.msgBox .left{
+    width:75%;
+    height:500px;
+    float:left;
+    border-radius: 3px;
+    background: #EAEEF9;
+    box-sizing: border-box;
+    border: 1px #ddd solid;
+}
+.msgBox .right{
+    width:24%;
+    height:500px;
+    float:right;
+    background: #EAEEF9;
+    box-sizing: border-box;
+    padding:20px 10px;
+}
+.msgBox .left .roomInfo{
+    color:#009966;
+    height:70px;
+    padding:10px;
+}
+.msgBox .left .roomInfo img{
+    display: inline-block;
+    width:80px;
+    height:50px;
+    margin-left:10px;
+}
+.msgBox .left .roomInfo span{
+    font-size: 0.9em;
+}
+.left .roomInfo .addFavBtn{
+    display: inline-block;
+    padding:5px 10px;
+    margin-left: 10px;
+    border:1px solid #009966;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.left .roomInfo .addFavBtnActive{
+    background-color: inherit;
+    color:#aaa;
+    border-color:#aaa;
+}
+.msgBox .left .roomInfo .roomName{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin:0 15px;
+}
+.msgBox .left .roomIntro{
+    /*box-shadow:0 5px 7px 1px rgba(26, 26, 26, 0.18);*/
+    padding:5px 20px;
+    font-size: 0.9em;
+    border-bottom: 1px #ddd solid;
+    height:30px;
+    overflow: hidden;
+}
+ .msgBox .left .msgList{
+     padding:10px 20px;
+     border-bottom: 1px #e5e5e5 solid;
+     font-size: 0.8em;
+     color:#1a1a1a;
+     height:280px;
+     overflow-y: scroll;
+     list-style: none;
+     margin-bottom: 0;
+ }
+.msgBox .left .msgList .userEnter{
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    border-bottom: 1px #e2e2e2 dashed;
+    font-size: 1em;
+    color:grey;
+    text-align: center;
+}
+.msgBox .left .msgList .msgLiLeft{
+    width:100%;
+    font-size: 1em;
+    padding:10px;
+}
+.msgLiLeft .userInfo{
+    padding:5px 10px;
+}
+.msgLiLeft .userInfo img{
+    width:35px;
+    height:35px;
+}
+.msgLiLeft .msg{
+    position:relative;
+    top:-5px;
+    margin:0 50px;
+    padding:10px;
+    border-radius: 8px;
+    background:#0084ff;
+    color:#fff;
+}
+.msgBox .left .msgList .msgLiRight{
+    width:100%;
+    font-size: 1em;
+    padding:10px;
+}
+.msgLiRight .userInfo{
+    padding:5px 10px;
+    float:right;
+}
+.msgLiRight .userInfo img{
+    width:35px;
+    height:35px;
+}
+.msgLiRight .msg{
+    position:relative;
+    top:-5px;
+    margin:0 50px;
+    padding:10px;
+    border-radius: 8px;
+    background:#fff;
+    color:#000;
+}
+.imgMsgRight{
+    max-width: 80%;
+    max-height: 150px;
+    float:right;
+    position: relative;
+    right: 50px;
+    bottom:10px;
+}
+.imgMsgLeft{
+    max-width: 80%;
+    max-height: 150px;
+    float:left;
+    position: relative;
+    left: 50px;
+    bottom:10px;
+}
+.msgBox .left .toolBar{
+    border-bottom: 1px #e2e2e2 dashed;
+    height:30px;
+    position: relative;
+    border-top: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+}
+.msgBox .left .lookBox{
+    position:absolute;
+    padding:10px;
+    width:500px;
+    top:-200px;
+    left:10px;
+    background:#fff;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+    box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+}
+.toolBar .colorBox{
+    margin-left:10px;
+    /*vertical-align: -2px;*/
+    display: inline-block;
+    width:30px;
+    padding:0;
+    border:none;
+    background-color: transparent;
+}
+.toolBar .addImgInput{
+    display: none;
+}
+.toolBar span{
+    color:#00a2ca;
+    cursor: pointer;
+    line-height: 30px;
+    padding-left:10px;
+}
+.msgBox .left .editor{
+    box-sizing: border-box;
+    border-bottom: 1px #e2e2e2 dashed;
+    height:90px;
+    position: relative;
+}
+.editor #chatCont{
+    border:none;
+    width:100%;
+    height:100%;
+    border:none;
+    padding:0;
+    line-height: 25px;
+    font-size:14px;
+    font-family: inherit;
+    background:transparent;
+    resize:none;
+}
+.editor .send{
+    position: absolute;
+    bottom:10px;
+    right:10px;
+    background: #0084FF;
+    border:none;
+}
+.msgBox .right .myInfo{
+    width:100%;
+    height:210px;
+    border-bottom:1px #cdcdcd solid;
+    text-align: center;
+}
+.msgBox .right .myInfo img{
+    width:90px;
+    height:90px;
+    margin:10px 0 20px 0;
+    border:1px #d9d9d9 solid;
+}
+.msgBox .right .myInfo p{
+    line-height: 20px;
+}
+.msgBox .right .people{
+    width:100%;
+    height:250px;
+}
+.msgBox .right .people .onlineList{
+    list-style: none;
+    padding-left: 20px;
+    line-height: 30px;
+    font-size: 1.2em;
+    color:#454545;
+}
+.msgBox .right .people .onlineList li{
+    font-size: 0.8em;
+}

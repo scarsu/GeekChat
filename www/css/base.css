@@ -1,0 +1,125 @@
+body {
+    padding-top: 70px;
+    background:#F6F6F6;
+    color:#8590a6;
+}
+/*页头*/
+.navbar-fixed-top .container{
+    width:1000px;
+    margin:0 auto;
+}
+.wrapper{
+    width:1000px;
+    margin:10px auto;
+}
+.navbar{
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+.navbar-brand{
+    color: #0084ff;
+    font-size: 30px;
+    font-family: -webkit-pictograph;
+    font-weight: bolder;
+}
+.navbar-brand small{
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: 600;
+}
+.navbar-brand:link,.navbar-brand:visited,.navbar-brand:hover,.navbar-brand:active{
+    color:#0084ff;
+}
+.nav li a{
+    color:#8590a6;
+}
+.nav li a:hover,.nav li a:active{
+    color:#175199;
+    background: #fff;
+}
+/*页头个人中心*/
+#curUserInfo{
+    padding:10px 0;
+}
+#curUserImg{
+    width:30px;
+    height:30px;
+    border-radius: 3px;
+}
+/*页尾*/
+.copy{
+    text-align: center;
+    font-size: 12px;
+    line-height: 21px;
+    margin:20px auto;
+}
+/*通用模块*/
+.card{
+    margin-bottom:15px;
+    background:#fff;
+    padding: 10px;
+    overflow:hidden;
+    box-sizing: border-box;
+    box-shadow:10px 9px 15px 1px rgba(26,26,26,.1);
+    border-radius:10px;
+}
+.card .header{
+    font-size: 1.1em;
+    height:30px;
+    line-height: 30px;
+    text-align: left;
+    color:#0084ff;
+    margin-bottom:10px;
+}
+.card .header .rightLink{
+    float:right;
+    color:#8590a6;
+    text-decoration: none;
+}
+.card .header .rightLink:hover,.card .header .rightLink:active{
+    color:#175199;
+    background: #fff;
+}
+.card .header hr{
+    margin:3px 0;
+}
+/*清除浮动*/
+.clearFloat{
+    clear:both
+}
+/*表单错误提示*/
+form .errorHint{
+    font-size: 14px;
+    line-height: 20px;
+    min-height:20px;
+    color:#f1403c;
+    text-align: left;
+}
+/*全局hint提示样式*/
+.hint {
+    color:#fff;
+    text-align: center;
+    font-size:1.3em;
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    min-width: 200px;
+    margin-left: -100px;
+    z-index: 99999;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow:5px 5px 10px 4px rgba(26,26,26,.1);
+}
+.hint-success {
+    background-color: #75B675;
+}
+.hint-info {
+    background-color: #59ACC4;
+}
+.hint-warning {
+    background-color: #CB5E59;
+}
+.hint-danger {
+    background-color: #CB5E59;
+}

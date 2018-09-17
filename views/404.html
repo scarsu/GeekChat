@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeekChat</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Node.js即时通讯"/>
+    <meta name="description" content="GeekChat" />
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/404.css" />
+
+    <script type="javascript" src="/js/jquery.min.js"></script>
+    <script type="javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="javascript" src="/socket.io/socket.io.js"></script>
+    <script type="javascript" src="/js/jquery.cookie.js"></script>
+    <script type="javascript" src="/js/base.js"></script>
+
+</head>
+<body>
+<div class="root">
+    <%- include header.ejs %>
+    <div class="error">
+        <h1 class="header">
+            <a href="/" class="logo">GeekChat</a>
+            - 404
+        </h1>
+        <div class="content">
+            <p>
+                <strong>你似乎来到了没有人存在的荒原...</strong>
+            </p>
+            <p>来源链接是否正确？聊天室、消息是否存在？</p>
+            <hr>
+            <p>
+                <a href="/">返回首页</a>
+                <span>或者</span>
+                <a href="javascript :;" onClick="javascript :history.back(-1);">返回上页</a>
+            </p>
+        </div>
+    </div>
+    <%- include footer.ejs %>
+</div>
+</body>
+</html>

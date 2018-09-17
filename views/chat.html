@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebChat</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="websocket,nodejs即时通讯"/>
+	<meta name="description" content="GeekChat" />
+	
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/chat.css" />
+
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/chat.js"></script>
+	
+</head>
+<body>
+	<div class="setName">
+		<div class="setBox">
+		<h1>GeekChat<small> -即刻通讯</small></h1>
+		<p>Node.js即时通讯系统</p>
+		<input type="text" class="inputName" placeholder="请输入3-12位昵称"/>
+		<input type="text" class="inputName" placeholder="请输入密码"/><br>
+		<a href="javascript:;" class="btn btn-blue set">注册</a>
+		<a href="javascript:;" class="btn btn-red close">登录</a>
+		</div>
+	</div>
+
+	<div class="mask">
+		<p>正在努力连接服务器...</p>
+	</div>
+	
+	<div class="top">
+		<div class="logo">
+			<h1>WebChatRoom <small>Node.js即时通讯</small></h1>
+		</div>
+	</div>
+
+	<!-- 群聊 -->
+	<div class="msgbox cl">
+		<div class="left">
+			<ul class="msglist">
+				<!--<li class="admin">-->
+					<!--<p class="name"><img src="./styles/images/logo.png" alt="管理员" width="40px" height="40px" align="center"><span>[湖南·长沙] 站长</span><span>2015-11-09 09:57:08</span></p>-->
+					<!--<div class="content">-->
+						<!--Hello！欢迎登录！-->
+					<!--</div>-->
+				<!--</li>-->
+				<li class="chatRoom">
+					<p class="roomName">
+						<img src="./styles/images/chatRoom.png" alt="聊天室" width="40px" height="40px" align="center">
+						[聊天室主题 : ]<span class="roomName"></span>
+						[创建时间 : ]<span class="roomStartTime"></span>
+					</p>
+					<div class="content">
+						Hello！欢迎登录！
+					</div>
+				</li>
+			</ul>
+			<div class="toolbar">
+				<div class="expressionBox hide"></div>
+				<div class="bgBox hide"></div>
+				<input type="color" value="color" class="colorBox" /><a href="javascript:;" class="changeWordColor">文字颜色</a>
+				<a href="javascript:;" class="addLook">添加表情</a>
+				<a href="javascript:;" class="changeBg">切换背景</a>
+			</div>
+			<div class="editor">
+				<textarea id="chat-content" placeholder="和大伙说点儿什么吧，enter键可发送消息哦..."></textarea>
+				<a href="javascript:;" class="send btn btn-blue" title="enter键发送">发送</a>
+			</div>
+		</div>
+		<div class="right">
+			<div class="myInfo">
+				<img src="./styles/images/logo.png" id="avatar" width="90px" height="90px" alt="头像">
+				<p>[昵称] : <span class="chatName"></span></p>
+				<p>[等级] : <span class="level"></span></p>
+				<p>[地点] : <span class="address"></span></p>
+				<!--<p>[上次登录] : 2015-11-09 10:39:30</p> -->
+			</div>
+			<ul class="people">
+				<li class="on">&gt;在线网友 [<small class="onlineNum"></small>人]</li>
+				<ul class="onlist"></ul>
+				<!-- <li class="off">&gt;离线人员 [10人]</li>
+				<ul class="offlist">
+					<li>JmingZI <span>[15/11/09 10:22:48]</span></li>
+					<li>JmingZI <span>[15/11/09 10:22:48]</span></li>
+					<li>JmingZI <span>[15/11/09 10:22:48]</span></li>
+					<li>JmingZI <span>[15/11/09 10:22:48]</span></li>
+				</ul> -->
+			</ul>
+		</div>
+	</div>
+	<!-- 版权 -->
+	<div class="copy">
+		&copy; 2015-11-09  版权所有
+	</div>
+
+
+</body>
+</html>

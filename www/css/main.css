@@ -1,0 +1,50 @@
+.carousel{
+    width:70%;
+    height:520px;
+    margin:10px 1% 10px 0;
+    float:left;
+}
+.carousel-inner>.item>img{
+    width: 100%;
+    height:520px;
+}
+.hotList{
+    margin:10px 0 10px 1%;
+    width:28%;
+    height:520px;
+    float:right;
+}
+.hotTop3{
+    cursor: pointer;
+}
+.favList{
+    width:38%;
+    margin:10px 1% 10px 0;
+    float:left;
+}
+.roomList{
+    width:58%;
+    margin:10px 0 10px 1%;
+    float:right;
+}
+.thumbnail{
+    cursor:pointer;
+}
+.thumbnail .caption{
+    padding:0;
+}
+.thumbnail img{
+    width: 100%;
+    height:120px;
+}
+.thumbnail h4{
+    color:#333;
+}
+.thumbnail p{
+    line-height: 20px;
+    height:20px;
+    text-overflow : ellipsis;
+    white-space:nowrap;
+    width:11em;
+    overflow:hidden;
+}

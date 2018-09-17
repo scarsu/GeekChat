@@ -1,0 +1,64 @@
+<nav class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/main">GeekChat<small>|即刻通讯</small></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/main">主页</a></li>
+                <li><a href="/allroom">全部聊天室</a></li>
+                <li><a href="#"] data-toggle="modal" data-target=".newRoomModal"><span class="glyphicon glyphicon-plus"></span>创建聊天室</a></li>
+                <li><a href="/about">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="curUserInfo" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="/img/user/default.png" id="curUserImg">
+                        <span class="headerUsername"></span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/center">个人中心</a></li>
+                        <li><a href="/mychatroom">我的聊天室</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/?logout=1">注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--新建聊天室模态框-->
+<div class="modal fade newRoomModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">新建聊天室</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-newRoom" id="form-newRoom">
+                    <div class="form-group">
+                        <label for="roomname" class="control-label">聊天室名称</label>
+                        <input id="roomname" name="roomname" class="form-control" placeholder="字数在3-12位" required autofocus>
+                        <div class="errorHint" id="errorHint001"> </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomintro" class="control-label">聊天室介绍</label>
+                        <textarea id="roomintro" name="roomintro" class="form-control" placeholder="填写70字以内的介绍，让大家更了解你的聊天室" required></textarea>
+                        <div class="errorHint" id="errorHint002"> </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomimg">上传聊天室头像</label>
+                        <input type="file" id="roomimg" accept="image/png,image/jpeg" required>
+                        <div class="errorHint" id="errorHint003"> </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="newRoomFn()">提交</button></div>
+        </div>
+    </div>
+</div>

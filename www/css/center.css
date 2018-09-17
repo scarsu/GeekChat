@@ -1,0 +1,103 @@
+.info{
+    position:relative;
+}
+.left{
+    position: relative;
+    width:220px;
+    height:220px;
+    float:left;
+    border-radius:5px;
+}
+.left img{
+    width:220px;
+    height:220px;
+    float:left;
+    box-shadow:10px 9px 15px 1px rgba(26,26,26,.1);
+    border-radius:10px;
+    cursor:pointer;
+}
+.leftMask{
+    width:220px;
+    height:220px;
+    position: absolute;
+    background:#1a1a1a;
+    border-radius:10px;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+    filter:alpha(opacity=50);  /*支持 IE 浏览器*/
+    -moz-opacity:0.50; /*支持 FireFox 浏览器*/
+    -khtml-opacity: 0.5; /*webkit内核浏览器*/
+    opacity:0.50;
+    cursor:pointer;
+}
+.leftMask .maskContent{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:5;
+    color:#fff;
+    text-align: center;
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    font-size: 16px;
+}
+.leftMask .maskContent .glyphicon{
+    font-size: 35px;
+}
+.right{
+    position:relative;
+    width:calc(100% - 220px);
+    box-sizing: border-box;
+    padding:15px 20px;
+    height:200px;
+    margin:10px 0;
+    float:left;
+    background:#fff;
+    box-shadow:10px 9px 15px 1px rgba(26,26,26,.1);
+}
+.right h1{
+    font-size:26px;
+    font-weight:600;
+    line-height: 30px;
+    color:#1a1a1a;
+    margin-bottom: 20px;
+}
+.right p{
+    font-size:16px;
+    line-height: 20px;
+    color:#1a1a1a;
+    margin-bottom: 15px;
+}
+.right p span{
+    font-size:16px;
+    line-height:20px;
+    color:#8590a6;
+    margin:0 10px;
+}
+.info .infoEditBtn{
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    color:#0084ff;
+    border:1px solid #0084ff;
+    display:inline-block;
+    padding:0 16px;
+    font-size: 14px;
+    line-height:32px;
+    text-align:center;
+    cursor:pointer;
+    background:none;
+    border-radius: 3px;
+}
+.info .infoEditBtn:hover{
+    background-color:rgba(0,132,255,.06);
+}
+.infoEditModel{
+}
+.mychatroom{
+    width:100%;
+    margin:10px 0;
+}

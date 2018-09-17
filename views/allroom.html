@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeekChat</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Node.js即时通讯"/>
+    <meta name="description" content="GeekChat" />
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/js/base.js"></script>
+
+    <style>
+        .thumbnail{
+            cursor:pointer;
+        }
+        .thumbnail img{
+            width: 100%;
+            height:150px;
+        }
+        .thumbnail .caption p{
+            line-height: 20px;
+            height:20px;
+            text-overflow : ellipsis;
+            white-space:nowrap;
+            width:14em;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="root">
+    <%- include header.ejs %>
+
+    <div class="wrapper card">
+        <div class="header">
+            <div>
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                所有聊天室
+            </div>
+            <hr>
+        </div>
+        <div class="row roomList">
+
+        </div>
+    </div>
+
+    <%- include footer.ejs %>
+</div>
+<script>
+    $(document).ready(function(){
+        // 获取所有聊天室
+        $.getJSON('/roomList.json',function(data){
+            var str="";
+            for(var i=0;i<data.length;i++){
+                str+="<div class='col-sm-4 col-md-3'><div class='thumbnail'";
+                str+=" onclick='window.location.href=\"chatroom?id="+data[i].id+"\";'>";
+                str+="<img src='/img/room/"+data[i].id+data[i].imgExt+"'>";
+                str+="<div class=\"caption\">";
+                str+="<h4>"+data[i].roomname+"</h4>";
+                str+="<p>"+data[i].intro+"</p></div></div></div>";
+            }
+            $(".roomList").html(str);
+        });
+    });
+</script>
+</body>
+</html>

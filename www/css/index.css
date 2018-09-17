@@ -1,0 +1,105 @@
+.root{
+  background-image:url("../img/bg/sign_bg.png");
+  background-repeat: no-repeat;
+  background-color: #b8e5f8;
+  background-size: cover;
+  width: 100%;
+  height:100vh;
+  overflow: auto;
+}
+.signCard{
+  width:432px;
+  margin:50px auto 20px auto;
+  padding:0;
+  text-align: center;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(26,26,26,.1);
+  box-sizing: border-box;
+}
+.signCard .signHead{
+  margin:25px 30px;
+  color: #0084ff;
+}
+.signCard .signHead h1{
+  font-size: 55px;
+  font-family: -webkit-pictograph;
+  font-weight: bolder;
+}
+.signCard .signHead p{
+  font-size: 20px;
+}
+.signCard .signContent{
+  margin:10px 30px;
+}
+.signCard .loginContent{
+  margin:10px 30px;
+}
+.signCard .signFoot{
+  background-color: #f6f6f6;
+  border-top:1px solid #ebebeb;
+  height:58px;
+  font-size:16px;
+  line-height: 58px;
+}
+.signCard .signFoot #signSwitch{
+  color:#175199;
+  cursor:pointer;
+}
+.hide{
+  display: none;
+}
+form .btn{
+  background-color: #0077e6;
+  color:#fff;
+  margin:10px 0 30px 0;
+}
+form .declare{
+  color:#8590a6;
+}
+form .declare a{
+  text-decoration: none;
+  color:#8590a6;
+}
+form .errorHint{
+  font-size: 14px;
+  line-height: 20px;
+  min-height:20px;
+  color:#f1403c;
+  text-align: left;
+}
+.copy{
+  text-align: center;
+  font-size: 12px;
+  line-height: 21px;
+  color:#fff;
+  text-shadow: 0 1px 2px #999;
+  margin:20px auto;
+}
+.hint {
+  color:#fff;
+  text-align: center;
+  font-size:1.3em;
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  min-width: 200px;
+  margin-left: -100px;
+  z-index: 99999;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow:5px 5px 10px 4px rgba(26,26,26,.1);
+}
+.hint-success {
+  background-color: #75B675;
+}
+.hint-info {
+  background-color: #59ACC4;
+}
+.hint-warning {
+  background-color: #CB5E59;
+}
+.hint-danger {
+  background-color: #CB5E59;
+}

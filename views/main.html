@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeekChat</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Node.js即时通讯"/>
+	<meta name="description" content="GeekChat" />
+
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/bootstrapTable/bootstrap-table.min.css" />
+	<link rel="stylesheet" href="/css/base.css" />
+	<link rel="stylesheet" href="/css/main.css" />
+
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/bootstrapTable/bootstrap-table.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/base.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+
+</head>
+<body>
+<div class="root">
+	<%- include header.ejs %>
+	<div class="wrapper">
+		<!--最热聊天室轮播图-->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="item active hotTop3" id="hotTop0">
+						<img src="/img/room/default.jpg" alt="">
+						<div class="carousel-caption">
+							<h1>最热聊天室Top1：<span class="roomName"></span></h1>
+							<p class="roomIntro"></p>
+						</div>
+					</div>
+					<div class="item hotTop3" id="hotTop1">
+						<img src="/img/room/default.jpg" alt="">
+						<div class="carousel-caption">
+							<h1>最热聊天室Top2：<span class="roomName"></span></h1>
+							<p class="roomIntro"></p>
+						</div>
+					</div>
+					<div class="item hotTop3" id="hotTop2">
+						<img src="/img/room/default.jpg" alt="">
+						<div class="carousel-caption">
+							<h1>最热聊天室Top3：<span class="roomName"></span></h1>
+							<p class="roomIntro"></p>
+						</div>
+					</div>
+				</div>
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		<!--聊天室热度排行表格-->
+		<div class="hotList card">
+			<div class="header">
+				<div><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 热门聊天室排行</div>
+				<hr>
+			</div>
+			<table id="roomHot20Table" data-pagination="true" data-toggle="table" data-page-size="10" data-page-list="Unlimited"></table>
+		</div>
+		<div class="clearFloat"></div>
+	</div>
+	<div class="wrapper">
+		<!--我收藏的聊天室表格-->
+		<div class="favList card">
+			<div class="header">
+				<div><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 我收藏的聊天室</div>
+				<hr>
+			</div>
+			<table id="favListTable" data-pagination="true" data-toggle="table" data-page-size="20" data-page-list="Unlimited"></table>
+		</div>
+		<!--所有聊天室缩略图9张-->
+		<div class="roomList card roomList9">
+			<div class="header">
+				<div>
+					<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+					所有聊天室
+					<a href="/allroom" class="rightLink">查看全部>></a>
+				</div>
+				<hr>
+			</div>
+			<div class="row"></div>
+		</div>
+		<div class="clearFloat"></div>
+	</div>
+	<%- include footer.ejs %>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeekChat</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Node.js即时通讯"/>
+	<meta name="description" content="GeekChat" />
+	
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/index.css" />
+
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+
+</head>
+<body>
+<div class="root">
+	<!--注册登录模块-->
+	<div class="signCard container">
+		<div class="signHead">
+			<h1>GeekChat</h1>
+			<p>即刻通讯--Node.js即时通讯系统</p>
+		</div>
+		<div class="signContent" style="display: none">
+			<form class="form-sign" action="main" method="post" onsubmit="return submitSignForm()" >
+				<input id="inputUsername" name="username" class="form-control" placeholder="请输入3-12位账号" required autofocus>
+				<div class="errorHint" id="errorHint1"> </div>
+				<input type="password" id="inputPassword" name="password" class="form-control" placeholder="请输入6-18位密码" required>
+				<div class="errorHint" id="errorHint2"> </div>
+				<input type="password" id="inputPasswordCheck" class="form-control" placeholder="请再次输入密码" required>
+				<div class="errorHint" id="errorHint3"> </div>
+				<input type="hidden" value="sign" name="formType">
+				<input type="hidden" name="addr" id="addr">
+				<input type="hidden" name="id" id="id">
+				<button class="btn btn-block btn-primary signBtn" type="submit">注册</button>
+				<div class="declare">
+					注册即代表同意 <a href="">《即刻通讯协议》</a>
+				</div>
+			</form>
+		</div> <!-- /signContent-->
+		<div class="loginContent">
+			<form class="form-login" action="main" method="post" onsubmit="return submitLoginForm()">
+				<input id="username" name="username" class="form-control" placeholder="账号" required autofocus>
+				<div class="errorHint" id="errorHint4"> </div>
+				<input type="password" id="password" name="password" class="form-control" placeholder="密码" required>
+				<div class="errorHint" id="errorHint5"> </div>
+				<input type="hidden" value="login" name="formType">
+				<button class="btn btn-block btn-primary loginBtn" type="submit">登录</button>
+			</form>
+		</div> <!-- /signContent-->
+		<div class="signFoot">
+			<span class="switchHint">已有账号？</span><span id="signSwitch">登录</span>
+		</div> <!-- /signFoot-->
+	</div> <!-- /signCard container -->
+
+	<!-- 版权 -->
+	<div class="copy">
+		&copy;  2018 即刻通讯
+	</div>
+</div> <!-- /root -->
+</body>
+</html>
