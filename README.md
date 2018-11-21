@@ -1,7 +1,23 @@
-# webchat
-nodeJs 在线聊天室.
+## Geekchat:Online Chatroom based on Node.js
     
-功能说明：   
-1. 用户：登录/注册/创建/管理聊天室/收藏聊天室
-2. 聊天：切换文字颜色/发送表情/发送图片;  
-5. 系统：聊天室排行/聊天室在线用户统计展示
+## Functions：   
+### user 
+- sign in / sign up
+- create and manage chatrooms
+- add fav chatrooms
+
+### chat function
+- send text / emojis / pictures
+- change text color
+    
+### system
+- show chatroom ranking by hot scores
+- show online users in chatroom
+
+## Related tech
+- mongodb & mongoose
+- express
+- socket.io
+- grunt
+- less
+- ejs
