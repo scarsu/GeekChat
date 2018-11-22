@@ -21,3 +21,7 @@
 - grunt
 - less
 - ejs
+
+## Update Plans
+- use webpack
+- use redis
