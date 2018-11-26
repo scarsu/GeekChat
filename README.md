@@ -25,3 +25,7 @@
 ## Update Plans
 - use webpack
 - use redis
+
+## run
+- mongod
+- node server.js
