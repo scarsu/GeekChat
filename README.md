@@ -9,7 +9,7 @@
 ### chat function
 - send text / emojis / pictures
 - change text color
-    
+
 ### system
 - show chatroom ranking by hot scores
 - show online users in chatroom
